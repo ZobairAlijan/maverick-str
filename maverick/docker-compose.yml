@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: maverick
+      POSTGRES_PASSWORD: maverick
+      POSTGRES_DB: maverick
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U maverick -d maverick"]
+      interval: 3s
+      timeout: 5s
+      retries: 20
+
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: postgres://maverick:maverick@db:5432/maverick
+      PORT: 8080
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  pgdata:
