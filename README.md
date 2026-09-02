@@ -1,11 +1,18 @@
-# SCAN — Maverick first cut
+# SCAN — Maverick First Cut
 
-One command. Docker only. App + database. Nothing in the cloud.
+Run the application locally with Docker using a single command. This starts both the application and the database. No cloud services are required.
 
 ```bash
 docker compose up --build
 ```
 
-Then open http://localhost:8080
+Once everything is running, open:
 
-To reset data: `docker compose down -v` and run the `command docker compose up --build` again.
+`http://localhost:8080`
+
+To reset the database and start with a clean environment:
+
+```bash
+docker compose down -v
+docker compose up --build
+```
