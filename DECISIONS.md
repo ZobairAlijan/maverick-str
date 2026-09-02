@@ -32,7 +32,7 @@ Skipped role and source fields. The notes describe four piles and three hats, bu
 
 ## Recurring stuff
 
-Monday brief / Friday roll-up / quarterly paperwork. Cron felt like fake completeness for a short cut. Templates + "spawn this period." Seed already puts this week's copies on the scan.
+Monday brief / Friday roll-up / quarterly paperwork. Cron felt like fake completeness for a short cut. Templates + "spawn this period." Seed puts this week's Monday copy on the scan. Friday and quarterly he spawns in the demo.
 
 ## Stack
 
@@ -51,4 +51,4 @@ Pings, email ingest, multi-user, auth, cloud, a real recurrence engine.
 
 ## Seed
 
-His examples, dates relative to today: email sign-off, tow bar, Friday write-up, Monday / Friday / quarterly templates, two done items so Board has history.
+His examples: email sign-off (NOW + WATCH), sticky / tow bar (NOW), line grab / hydraulics Friday (NEXT), whiteboard / fuel truck (NEXT), one Monday brief already spawned. Friday and quarterly templates are there to spawn.
